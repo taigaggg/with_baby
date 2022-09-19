@@ -1,0 +1,31 @@
+<%# 商品の概要 %>
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @diary.diary_title %>
+    </h2>
+    <div class="item-img-content">
+      <%= image_tag @diary.image ,class:"item-box-img" %>
+    </div>
+    <div class="item-price-box">
+      <span class="item-price">
+        <%= @diary.diary_comment %>
+      </span>
+      <span class="item-postage">
+        <%= @diary.diary_day %>
+      </span>
+    </div>
+      <% if current_user.id == @diary.user_id %>
+          <%= link_to "商品の編集", edit_diary_path(@diary.id), method: :get, class: "item-red-btn" %>
+          <p class="or-text">or</p>
+          <%= link_to "削除", diary_path(@diary.id), method: :delete, class:"item-destroy" %>
+        <% else %>
+          <% link_to "コメントする", "#_path(@diary.id)" ,class:"item-red-btn"%>
+      <% end %>
+  </div>
+  <%# /商品の概要 %>
+  <div class="back">
+    <%=link_to '一覧へ戻る', root_path, class:"back-btn" %>
+  </div>
+</div>
+

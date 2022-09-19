@@ -47,12 +47,12 @@
 
 <!-- ## diariesテーブル
 
-|Column      |Type      |Options                        |
-|------------|----------|-------------------------------|
-|title       |string    |null: false                    |
-|comment     |text      |null: false                    |
-|day         |integer   |null: false                    |
-|user        |references|null: false, foreign_key: true |
+|Column            |Type      |Options                        |
+|------------------|----------|-------------------------------|
+|diary_title       |string    |null: false                    |
+|diary_comment     |text      |null: false                    |
+|diary_day         |integer   |null: false                    |
+|user              |references|null: false, foreign_key: true |
 <!-- imageカラムはactive_storage導入時に自動でテーブルなどが生成される -->
 
 <!-- ### Association
