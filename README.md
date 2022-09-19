@@ -51,7 +51,7 @@
 |------------------|----------|-------------------------------|
 |diary_title       |string    |null: false                    |
 |diary_comment     |text      |null: false                    |
-|diary_day         |integer   |null: false                    |
+|diary_day         |date      |null: false                    |
 |user              |references|null: false, foreign_key: true |
 <!-- imageカラムはactive_storage導入時に自動でテーブルなどが生成される -->
 
@@ -60,16 +60,20 @@ belongs_to :user
 
 ## mealsテーブル
 
-|Column      |Type      |Options                        |
-|------------|----------|-------------------------------|
-|title       |string    |null: false                    |
-|comment     |text      |null: false                    |
-|day         |integer   |null: false                    |
-|user        |references|null: false, foreign_key: true | -->
+|Column       |Type      |Options                        |
+|-------------|----------|-------------------------------|
+|meal_title   |string    |null: false                    |
+|meal_comment |text      |null: false                    |
+|meal_day     |date      |null: false                    |
+|user         |references|null: false, foreign_key: true | -->
 <!-- imageカラムはactive_storage導入時に自動でテーブルなどが生成される -->
 
+<!-- 以下は、Activehashにて実装する
+|taste        |integer   |null: false                    |
+|meal_time    |integer   |null: false                    |
+ -->
 <!-- ### Association
-belongs_to :user
+belongs_to :users
 
 ## usersテーブル
 
