@@ -78,7 +78,7 @@ belongs_to :user
 |nickname          |string |null: false               |
 |email             |string |null: false, unique: true |
 |encrypted_password|string |null: false               |
-|baby_name         |string |null: false               |
+|babyname          |string |null: false               |
 |birthday          |date   |null: false               |
 
 <!-- ユーザー管理機能で使用するdeviseの設定で、emailカラムには一意性制約がかかっている為、emailにunique: trueを記載している -->
