@@ -1,16 +1,16 @@
 <div class="items-sell-main">
-  <h2 class="items-sell-title">日記を記録しよう！</h2>
-  <%= form_with model:@diary,local: true do |f| %>
+  <h2 class="items-sell-title">食事を記録しよう！</h2>
+  <%= form_with model:@meal,local: true do |f| %>
   <%= render 'shared/error_messages', model: f.object %>
   <%# 投稿画像 %>
   <div class="img-upload">
     <div class="weight-bold-text">
-      今日の思い出の一枚
+      今日のご飯！
       <span class="indispensable">必須</span>
     </div>
     <div class="click-upload">
       <p>
-        写真と一緒に残そう！
+        ご飯の写真を撮ろう！
       </p>
       <%= f.file_field :image, id:"item-image" %>
     </div>
@@ -19,24 +19,38 @@
   <%# 商品名と商品説明 %>
   <div class="new-items">
     <div class="weight-bold-text">
-      今日のできごと
+      今日のご飯
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :diary_title, class:"items-text", id:"item-name", placeholder:"今日のできごと（50文字まで)", maxlength:"50" %>
+    <%= f.text_area :meal_title, class:"items-text", id:"item-name", placeholder:"食べたもの（50文字まで)", maxlength:"50" %>
     <div class="items-explain">
       <div class="weight-bold-text">
-        どんなできごと？
+        食べたものについて記録しよう！
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :diary_comment, class:"items-text", id:"item-info", placeholder:"できごとを書き残そう（ 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+      <%= f.text_area :meal_comment, class:"items-text", id:"item-info", placeholder:"食べたものについて記録を残そう（ 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+      <div class="weight-bold-text">
+        お子さんの反応
+        <span class="indispensable">必須</span>
+      </div>
+      <div class='input-birth-wrap'>
+      <%= f.collection_select(:taste_id, Taste.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+      </div>
+      <div class="weight-bold-text">
+        食べた時間
+        <span class="indispensable">必須</span>
+      </div>
+      <div class='input-birth-wrap'>
+      <%= f.collection_select(:meal_time_id, MealTime.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+      </div>
       <div class='form-text-wrap'>
-        <label class="form-text">今日の日付</label>
+        <label class="form-text">食べた日</label>
         <span class="indispensable">必須</span>
       </div>
       <div class='input-birth-wrap'>
         <%= raw sprintf(
                     f.date_select(
-                      :diary_day,
+                      :meal_day,
                       class:'select-birth',
                       id:"birth-date",
                       use_month_numbers: true,
@@ -51,7 +65,7 @@
   <%# /商品名と商品説明 %>
   <%# 下部ボタン %>
   <div class="sell-btn-contents">
-    <%= f.submit "思い出を残す" ,class:"sell-btn" %>
+    <%= f.submit "記録を残す" ,class:"sell-btn" %>
     <%=link_to 'もどる', root_path, class:"back-btn" %>
   </div>
   <%# /下部ボタン %>
