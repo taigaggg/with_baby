@@ -1,4 +1,13 @@
-
+<%= render "shared/header" %>
+<div class='nav'>
+  <% if user_signed_in? %>
+  <% else %>
+    <ul class='lists-right'>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+    </ul>
+  <% end %>
+</div>
 <%# 記録一覧 %>
 <div class='item-contents'>
   <h2 class='title'>記録</h2>
@@ -33,7 +42,7 @@
     <% end%>
   </ul>
 
-  <%= link_to(new_diary_path, class: 'purchase-btn') do %>
+  <%= link_to(new_meal_path, class: 'purchase-btn') do %>
   <span class='purchase-btn-text'>食事の記録を残す</span>
   <!-- < image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" > -->
   <% end %>
@@ -42,21 +51,24 @@
   </div>
   <ul class='item-lists'>
     <%# 食事記録 %>
-    <% @diaries.each do |diary|%>
+    <% @meals.each do |meal|%>
       <li class='list'>
-        <%= link_to diary_path(diary.id) do %>
+        <%= link_to meal_path(meal.id) do %>
         <div class='item-img-content'>
-          <%= image_tag diary.image, class: "item-img" %>
+          <%= image_tag meal.image, class: "item-img" %>
         </div>
         <div class='item-info'>
           <h3 class='item-name'>
-            <%= diary.diary_title %>
+            <%= meal.meal_title %>
           </h3>
           <h3 class='item-name'>
-            <%= diary.diary_comment %>
+            <%= meal.meal_comment %>
           </h3>
           <h3 class='item-name'>
-            <%= diary.diary_day %>
+            <%= meal.meal_time.name %>
+          </h3>
+          <h3 class='item-name'>
+            <%= meal.meal_day %>
           </h3>
         </div>
         <% end %>

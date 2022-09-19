@@ -3,6 +3,7 @@ class DiariesController < ApplicationController
   before_action :set_diary, only: [:edit, :show, :update, :destroy]
   def index
     @diaries = Diary.all
+    @meals = Meal.all
   end
 
   def new
