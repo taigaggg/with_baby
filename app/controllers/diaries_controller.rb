@@ -2,8 +2,10 @@ class DiariesController < ApplicationController
   before_action :authenticate_user! , only:[:new,:edit, :destroy]
   before_action :set_diary, only: [:edit, :show, :update, :destroy]
   def index
-    @diaries = Diary.all
-    @meals = Meal.all
+    if user_signed_in?
+    @diaries = Diary.where(user_id: current_user.id)
+    @meals = Meal.where(user_id: current_user.id)
+    end
   end
 
   def new
