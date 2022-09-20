@@ -8,7 +8,9 @@
     </ul>
   <% end %>
 </div>
-<%# 記録一覧 %>
+
+<% if user_signed_in? %>
+  <%# 記録一覧 %>
 <div class='item-contents'>
   <h2 class='title'>記録</h2>
   <%= link_to(new_diary_path, class: 'purchase-btn') do %>
@@ -76,4 +78,5 @@
     <% end%>
   </ul>
 </div>
-
+<% else %>
+<% end %>
