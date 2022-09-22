@@ -7,20 +7,27 @@
     <div class="show-img-content">
       <%= image_tag @meal.image ,class:"show-box-img" %>
     </div>
-    <div class="show-comment-box">
-      <span class="show-comment">
-        <%= @meal.meal_comment %>
-      </span>
-      <span class="show-taste">
-        <%= @meal.taste.name %>
-      </span>
-      <span class="show-time">
-        <%= @meal.meal_time.name %>
-      </span>
-      <span class="show-day">
-        <%= @meal.meal_day %>
-      </span>
-    </div>
+    <table class="show-comment-box">
+      <tbody>
+        <tr>
+          <th class="show-item">コメント</th>
+          <td class="show-value"><%= @meal.meal_comment %></td>
+        </tr>
+        <tr>
+          <th class="show-item">食べた様子</th>
+          <td class="show-value"><%= @meal.taste.name %></td>
+        </tr>
+        <tr>
+          <th class="show-item">食べた時間</th>
+          <td class="show-value"><%= @meal.meal_time.name %></td>
+        </tr>
+        <tr>
+          <th class="show-item">投稿日</th>
+          <td class="show-value"><%= @meal.meal_day %></td>
+        </tr>
+        <tr>
+      </tbody>
+    </table>
       <% if current_user.id == @meal.user_id %>
           <%= link_to "記録の編集", edit_meal_path(@meal.id), method: :get, class: "item-orange-btn" %>
           <p class="or-text">or</p>

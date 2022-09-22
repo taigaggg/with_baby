@@ -16,6 +16,28 @@
   <div class="introduction">
     <div class="main-introduction">
       <h3 class="introduction-title">紹介</h3>
+      <p class="introduct-text">あなたのお子様の日々の思い出や、記録を残しませんか？</p>
+      <div class="introduct">
+        <div class="introduction-content">
+        </div>
+        <p class="introduct-sub-text">
+          <br><br> このような投稿が可能です。<br>
+          写真と写真のタイトル、そしてコメントと日付を投稿できます。<br><br>
+          お子様の成長はあっという間<br>
+          そんな大切な日常の記録をこのように残しておきましょう。
+        </p>
+      </div>
+      <div class="introduct">
+        <div class="introduction-content-second">
+        </div>
+        <p class="introduct-sub-text">
+          <br><br> 他にも、食事の記録の可能です。<br>
+          写真と写真のタイトル、そしてコメントと食事の時間、日付を投稿できます。<br><br>
+          お子様の好き嫌いの記録、<br>
+          食事の過程を記録し、成長を実感しましょう。
+        </p>
+      </div>
+      <p class="introduct-text">是非、お子さんの日々の思い出や、記録にご利用ください！</p>
     </div>
     <div class='new-button'>
       <div class='introduction-right'>
@@ -69,8 +91,8 @@
     <div class="subtitle" >
       食事記録一覧
     </div>
-    <%= link_to(new_meal_path, class: 'purchase-btn') do %>
-    <span class='purchase-btn-text' id="meal-btn">食事の記録を残す</span>
+    <%= link_to(new_meal_path, class: 'meal-btn') do %>
+    <span class='meal-btn-text' id="meal-btn">食事の記録を残す</span>
     <!-- < image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" > -->
     <% end %>
     <ul class='item-lists'>
@@ -78,10 +100,10 @@
       <% @meals.each do |meal|%>
         <li class='list'>
           <%= link_to meal_path(meal.id) do %>
-          <div class='item-img-content'>
+          <div class='meal-img-content'>
             <%= image_tag meal.image, class: "item-img" %>
           </div>
-          <div class='item-info'>
+          <div class='meal-info'>
             <h3 class='meal-title'>
               <%= meal.meal_title %>
             </h3>

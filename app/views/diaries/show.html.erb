@@ -7,14 +7,19 @@
     <div class="show-img-content">
       <%= image_tag @diary.image ,class:"show-box-img" %>
     </div>
-    <div class="show-comment-box">
-      <span class="show-comment">
-        <%= @diary.diary_comment %>
-      </span>
-      <span class="show-day">
-        <%= @diary.diary_day %>
-      </span>
-    </div>
+    <table class="show-comment-box">
+      <tbody>
+        <tr>
+          <th class="show-item">コメント</th>
+          <td class="show-value"><%= @diary.diary_comment %></td>
+        </tr>
+        <tr>
+          <th class="show-item">投稿日</th>
+          <td class="show-value"><%= @diary.diary_day %></td>
+        </tr>
+        <tr>
+      </tbody>
+    </table>
       <% if current_user.id == @diary.user_id %>
           <%= link_to "日記の編集", edit_diary_path(@diary.id), method: :get, class: "item-orange-btn" %>
           <p class="or-text">or</p>
