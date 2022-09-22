@@ -12,43 +12,72 @@ https://with-baby.herokuapp.com/
 
 # 利用方法
 ## ユーザー登録機能
-・一覧ページから、新規登録またはログインを行うことで、一覧画面が変化する。
+・一覧ページから、新規登録またはログインを行うことで、一覧画面が変化するようになっている。
 ## 画像投稿機能付きの日常の記録
-・新規登録から、日常の記録(画像、タイトル、コメント)を入力することで、一覧画面から確認ができる。
+・一覧ページから、日常の記録(画像、タイトル、コメント、日付)を入力し、投稿ができる。
 ## 画像投稿機能付きの食事の記録
-・新規登録から、食事の記録(画像、タイトル、コメント)を入力することで、一覧画面から確認ができる。
-## 健康状態の記録
-・新規登録から、健康の記録(健康状態、体温、コメント)を入力することで、一覧画面から確認ができる。
-## カレンダーによる予定管理機能
-・カレンダーに予定を書き込み、保存することで記入した予定を一覧で確認することができる。
+・一覧ページから、食事の記録(画像、タイトル、コメント、好み、食べた時間、日付)を入力し、投稿ができる。
+
 # アプリケーションを作成した背景
-大きな背景として、毎日使うようなものを作成したいという思いがあった。
-身近な存在である妻に相談したところ、子どもの記録を簡単に行える機能のついたアプリケーションが欲しいということだった。既存のアプリを確認し、それにない機能を追加することで付加価値をつけることにした。
+背景として、毎日使うようなものを作成したいという思いがあった。
+身近な存在である妻に相談したところ、子どもの記録を簡単に行える機能のついたアプリケーションが欲しいという要望があった。
+既存のアプリを確認し、あまりない機能を追加することで付加価値をつけることにした。
 # 洗い出した要件
 [要件定義シート](https://docs.google.com/spreadsheets/d/15xG2Aew6_RMhoxgJ5rywZdXuu6ErdbkBXj--qRPk4_0/edit#gid=982722306)
 # 実装した機能についての画像やGIFおよびその説明
 ・一覧画面から、ユーザーに関する一連動作が行える。
-・一覧画面から、記録に関する内容の投稿を画像付きで投稿できる。
-・一覧画面から、予定に関する内容をカレンダー機能を用いて投稿できる。
+[![Image from Gyazo](https://i.gyazo.com/174ba37a490164217bc90e872b4c34c3.gif)](https://gyazo.com/174ba37a490164217bc90e872b4c34c3)
+[![Image from Gyazo](https://i.gyazo.com/21fca383b0f11e95947863bd4bbbb1a3.gif)](https://gyazo.com/21fca383b0f11e95947863bd4bbbb1a3)
+
+・一覧画面から、各記録に関する内容の投稿を画像付きで投稿できる。
+[![Image from Gyazo](https://i.gyazo.com/08a78e80e44a660517c47568eaad24f2.gif)](https://gyazo.com/08a78e80e44a660517c47568eaad24f2)
+[![Image from Gyazo](https://i.gyazo.com/d7851439252c004047d872bcd79cdf2d.gif)](https://gyazo.com/d7851439252c004047d872bcd79cdf2d)
+
+・一覧画面から、投稿内容の詳細へ遷移できる。
+[![Image from Gyazo](https://i.gyazo.com/611536b021b7a4eea9def8f6b6d10e9e.gif)](https://gyazo.com/611536b021b7a4eea9def8f6b6d10e9e)
+
+・詳細ページから、投稿の編集と削除が行える。
+[![Image from Gyazo](https://i.gyazo.com/073cca9f042ed34053fea4d206bed433.gif)](https://gyazo.com/073cca9f042ed34053fea4d206bed433)
+[![Image from Gyazo](https://i.gyazo.com/7a7a19c526ed2531d4680dc4157c07d3.gif)](https://gyazo.com/7a7a19c526ed2531d4680dc4157c07d3)
+
 # 実装予定の機能
 上記以外の機能に関して、家族で各投稿内容を共有する実装をしていきたい。
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/73bcf1b6fecf8aa96bff89c8275f1981.png)](https://gyazo.com/73bcf1b6fecf8aa96bff89c8275f1981)
+[![Image from Gyazo](https://i.gyazo.com/3aba6096e7bdc7c582a36350cced3467.png)](https://gyazo.com/3aba6096e7bdc7c582a36350cced3467)
+
 # 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/c0038bea8ee46155c0dfb5461cb2624a.png)](https://gyazo.com/c0038bea8ee46155c0dfb5461cb2624a)
+[![Image from Gyazo](https://i.gyazo.com/acba66276787e067bcb38cd60eb84541.png)](https://gyazo.com/acba66276787e067bcb38cd60eb84541)
+
 # 開発環境
-・フロントエンド
-・バックエンド
-・インフラ
-・テスト
-・テキストエディタ
-・タスク管理
+・HTML
+・CSS
+・JavaScript
+・Ruby
+・Ruby on Rails
+・Rspec
+・MySQL
+・AWS
+・Visual Studio
+・Github
 
 # ローカルでの動作方法
-今後実装次第記載する。
+% git clone
+% cd with_baby
+% bundle install
+% yarn install
 
 # 工夫したポイント
-今後実装次第記載する。
+大きなポイントは、２つ。
+1.一覧機能に２つの投稿機能を合わせた
+2.ビューの配色にこだわった
+
+ユーザーの投稿内容が一見でわかりやすいように、一覧ページにすべての投稿機能の内容を表示することにした。
+また、投稿も簡単に行えるように、ボタンの配置にも工夫をした。
+配色については、配色ツールをしようしてできるだけみやすいものを心がけた。
+登録や投稿のボタンには行動意欲が増すオレンジを採用するなどした。
+
+今後機能を追加するとしたら、体調を管理できる機能や、予定を管理できるカレンダー機能を追加してみたい。
+また、許可したユーザーが自分の投稿を閲覧できる機能もあったら良いと思っている。
 
 <!-- ## diariesテーブル
 

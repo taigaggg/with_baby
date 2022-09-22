@@ -53,9 +53,9 @@ a {
 }
 
 .introduction-title{
-font-size: 4vh;
-color: rgb(20, 164, 208);
-margin-bottom: 2vh;
+  font-size: 4vh;
+  color: rgb(20, 164, 208);
+  margin-bottom: 2vh;
 }
 
 .introduction{
@@ -76,7 +76,7 @@ margin-bottom: 2vh;
 }
 
 .introduction-content{
-  height: 38vh;
+  height: 40vh;
   width: 20vw;
   // border: #000 solid;
   background-size: 80% auto;
@@ -165,7 +165,7 @@ margin-bottom: 2vh;
 }
 
 .purchase-btn{
-  height: 5vh;
+  margin-bottom: 20px;
 }
 
 .purchase-btn-text{
@@ -197,7 +197,9 @@ margin-bottom: 2vh;
 }
 
 .item-img-content {
-  margin-left: 15px;
+
+  margin-top: 3vh;
+  margin-right: 2vh;
 }
 
 .item-img {
@@ -232,11 +234,11 @@ transform: scale(0.85, 0.85);
 
 .diary-day{
   font-size: 1vh;
-  margin-left: 180px;
+  margin-left: 160px;
 }
 
 .meal-btn{
-  height: 5vh;
+margin-bottom: 20px;
 }
 
 .meal-img-content {
@@ -281,7 +283,7 @@ transform: scale(0.85, 0.85);
 
 .meal-day{
   font-size: 1vh;
-  margin-left: 180px;
+  margin-left: 160px;
 }
 
 /* //記録一覧 */
