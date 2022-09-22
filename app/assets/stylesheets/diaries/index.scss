@@ -1,222 +1,144 @@
+*{
+  margin: 0;
+}
+.main {
+  background: #D2C6B8;
+}
+
 a {
   text-decoration: none;
 }
 
-.main {
-  background: #f8f8f8;
-}
-
-/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
 .title-contents {
   width: 100vw;
-  background-image: image-url('furima-header01.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 5vh 15vw;
-  color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-}
+  height: 60vh;
+  background-image: image-url('title-image1.png'),image-url('title-image2.png');
+  /*2枚の画像の横幅を、いずれもcontainer幅の半分に指定*/
+  background-size: 50% auto,50% auto;
+   /*1枚目の画像を左上、2枚目の画像を右下に配置*/
+   background-position: left top,right top;
+  /*2枚の画像をいずれも繰り返さないよう指定*/
+  background-repeat: no-repeat,no-repeat;
 
-.service-title {
-  font-size: 8vh;
-}
-
-.service-explain {
-  font-size: 2.5vh;
-  line-height: 40px;
-}
-
-.store-btn {
-  display: flex;
-  margin-top: 24px;
-}
-
-.apple-btn {
-  margin-right: 1vw;
-  height: 9vh;
-}
-
-.google-btn {
-  height: 9vh;
-}
-
-/* //画面上部の「人生を変えるフリマアプリ」帯部分 */
-
-/* FURIMAが選ばれる3つの理由部分 */
-.select-reason-contents {
-  padding: 5vh 15vw;
-}
-
-.select-reason-contents>.title {
-  text-align: center;
-  font-size: 3.5vh;
-  font-weight: bold;
-  margin-bottom: 5vh;
-  position: relative;
-}
-
-.select-reason-contents>.title::after {
-  content: '';
-  width: 70px;
-  height: 4px;
-  background-color: #3ccace;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.reason-lists {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.reason-lists>.list {
-  width: 33vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-}
-
-.list-pict {
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.reason-list-number {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  font-size: 30px;
-  text-align: center;
-  line-height: 60px;
-  background-color: #3ccace;
-  color: #fff;
-}
-
-.reason-list-text {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 50px;
-}
-
-.reason-list-blue-text {
-  color: #3ccace;
-}
-
-.reason-list-description {
-  font-size: 18px;
-  margin-top: 20px;
-}
-
-/* //FURIMAが選ばれる3つの理由部分 */
-
-
-/* 画面中央の「会員数日本一位」帯部分*/
-.ad-contents {
-  width: 100vw;
-  background-image: image-url('furima-header02.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
   padding: 5vh 15vw;
-  color: #fff;
+  color: rgb(20, 164, 208);
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  margin-bottom: 50px;
 }
 
-.ad-title {
+.service-title{
   font-size: 5vh;
+}
+
+.service-explain{
+  font-size: 3vh;
+}
+
+.introduction{
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-introduction{
+  display: block;
+  border: 3px orange solid;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 3vh;
+}
+
+.introduction-title{
+font-size: 4vh;
+color: rgb(20, 164, 208);
+margin-bottom: 2vh;
+}
+
+.introduction{
+  height: 105vh;
+  margin-left: 20px;
+}
+
+.introduct-text{
+  margin-bottom: 2vh;
+  font-size: 2vh;
+  font-weight: bold;
+}
+
+.introduct-sub-text{
+  margin-bottom: 2vh;
+  font-size: 2vh;
+  font-weight: bold;
+}
+
+.introduction-content{
+  height: 35vh;
+  width: 20vw;
+  // border: #000 solid;
+  background-size: 80% auto;
+  background-image: image-url('introduce-image2.png');
+  background-repeat: no-repeat;
+}
+
+.introduction-content-second{
+  height: 40vh;
+  width: 20vw;
+  // border: #000 solid;
+  background-size: 80% auto;
+  background-image: image-url('introduce-image1.png');
+  background-repeat: no-repeat;
+}
+
+.introduct{
+  display: flex;
   margin-bottom: 2vh;
 }
 
-.ad-explain {
-  font-size: 2.5vh;
-  line-height: 30px;
+.introduction-right{
+  font-size: 3vh;
+  color: rgb(20, 164, 208);
+  border: orange 3px solid;
+  padding: 20px 20px 40px 20px;
+  border-radius: 15px;
 }
 
-.store-btn {
-  display: flex;
-  margin-top: 24px;
-}
-
-.apple-btn {
-  margin-right: 1vw;
-  height: 9vh;
-}
-
-.google-btn {
-  height: 9vh;
-}
-
-/* //画面中央の「会員数日本一位」帯部分 */
-
-/* FURIMAの特徴 */
-.feature-contents {
-  padding: 5vh 15vw;
-}
-
-.feature-contents>.title {
-  text-align: center;
-  font-size: 3.5vh;
-  font-weight: bold;
-  margin-bottom: 5vh;
-  position: relative;
-}
-
-.feature-contents>.title::after {
-  content: '';
-  width: 70px;
-  height: 4px;
-  background-color: #3ccace;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.feature-lists {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.feature-lists>.list {
-  width: 33vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.feature-list-text {
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 50px;
-}
-
-.feature-list-description {
-  font-size: 18px;
+.right-title{
   margin-top: 20px;
+  margin-bottom: 15px;
+  border-bottom: rgb(20, 164, 208) 1px solid;
+}
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  color: #ffffff;
+  background-color: orange;
+  border-radius: 15px;
+  padding: 10px;
 }
 
-/* //FURIMAの特徴 */
+.login:hover{
+  background-color: rgb(255, 145, 0);
+}
 
-/* 商品一覧 */
+.sign-up {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: orange;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.sign-up:hover{
+  background-color: rgb(255, 145, 0);
+}
+
+/* 記録一覧 */
 
 .item-contents {
-  background-color: #FFF;
+  background-color: #D2C6B8;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,13 +149,30 @@ a {
   font-size: 5vh;
   line-height: 1.4;
   font-weight: bold;
+  border-bottom: 2px solid;
+  padding: 0px 100px ;
+  margin-bottom: 3vh;
 }
 
 .item-contents>.subtitle {
   font-size: 3vh;
   margin: 1vh 0;
   text-decoration: none;
-  color: #3ccace;
+  color: rgb(20, 164, 208);
+  font-weight: bold;
+  margin-bottom: 2vh;
+}
+
+.purchase-btn-text{
+  text-decoration: none;
+  font-size: 3vh;
+  background-color: orange;
+  padding: 10px;
+  border-radius: 15px;
+  color: #ffffff;
+}
+
+.purchase-btn-text:hover{
   font-weight: bold;
 }
 
@@ -242,70 +181,107 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  list-style: none;
 }
 
 .item-lists>.list {
   width: 37vh;
   padding: 1vw;
-  background-color: #FFF;
+  background-color: #D2C6B8;
+  text-decoration: none;
+  margin: 0px 10px;
 }
-
 
 .item-img-content {
   position: relative;
+  margin-top: 3vh;
+  margin-right: 2vh;
 }
 
 .item-img {
   width: 33vh;
-  height: 33vh;
+  height: 28vh;
+  border-radius: 10px;
 }
-
-.sold-out {
-  position: absolute;
-  top: 40%;
-  width: 100%;
-  text-align: center;
-  background-color: crimson;
-  transform: skewY(-10deg);
+.item-img {
+transition: 0.5s;
 }
-
-.sold-out>span {
-  color: #FFF;
-  font-size: 45px;
-  font: bold;
+.item-img:hover {
+transform: scale(0.85, 0.85);
 }
-
 
 .item-info {
   background-color: #FFF;
   color: black;
   padding: 1vw;
+  border: 2px solid;
+  border-radius: 15px;
+  margin-right: 2vh;
 }
 
-.item-name {
+.diary-title {
   font-size: 2.5vh;
+  border-bottom: 1px solid;
+  margin-bottom: 10px;
 }
 
-.item-price {
-  font-size: 1.5vh;
-  display: flex;
-  justify-content: space-between;
-}
-
-
-.star-btn {
-  display: flex;
-  align-items: center;
-}
-
-.star-icon {
-  height: 2vh;
-  width: 2vh;
-  margin-right: 0.5vw;
-}
-
-.star-count {
+.diary-comment{
   font-size: 2vh;
 }
 
-/* //商品一覧 */
+.diary-day{
+  font-size: 1vh;
+  margin-left: 180px;
+}
+
+.meal-btn{
+  height: 5vh;
+}
+
+.meal-img-content {
+  position: relative;
+  margin-top: 3vh;
+}
+
+.meal-btn-text{
+  text-decoration: none;
+  font-size: 3vh;
+  background-color: orange;
+  padding: 10px;
+  border-radius: 15px;
+  color: #ffffff;
+}
+
+.meal-btn-text:hover{
+  font-weight: bold;
+}
+
+.meal-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+  border: 2px solid;
+  border-radius: 15px;
+}
+
+.meal-title {
+  font-size: 2.5vh;
+  border-bottom: 1px solid;
+  margin-bottom: 10px;
+}
+
+.meal-comment{
+  font-size: 2vh;
+  margin-bottom: 5px;
+}
+
+.meal-time{
+  font-size: 2vh;
+}
+
+.meal-day{
+  font-size: 1vh;
+  margin-left: 180px;
+}
+
+/* //記録一覧 */

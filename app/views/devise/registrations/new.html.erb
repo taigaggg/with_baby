@@ -1,3 +1,4 @@
+<%= render "shared/second-header" %>
 <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
 
 <div class='form-wrap'>
@@ -7,14 +8,14 @@
     </h1>
   </div>
   
-  <!--あとでエラー表示を < render 'shared/error_messages', model: f.object > -->
+  <%= render 'shared/error_messages', model: f.object %>
 
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">ニックネーム</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) furima太郎", maxlength:"40" %>
+    <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"例) パパ太郎", maxlength:"40" %>
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
@@ -89,7 +90,8 @@
     <p class='info-text'>※ ご入力いただいた情報はアプリケーション内で使用させていただきます。</p>
   </div>
   <div class='register-btn'>
-    <%= f.submit "会員登録" ,class:"register-red-btn" %>
+    <%= f.submit "会員登録" ,class:"register-orange-btn" %>
   </div>
 </div>
 <% end %>
+<%= render "shared/second-footer" %>

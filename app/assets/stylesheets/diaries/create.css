@@ -1,0 +1,25 @@
+a {
+  text-decoration: none;
+}
+
+.create-page{
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success {
+  background-color: #ffffff;
+  width: 50%;
+  min-width: 450px;
+  font-size: 2vh;
+}
+
+.success-btn{
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgb(20, 164, 208);
+}

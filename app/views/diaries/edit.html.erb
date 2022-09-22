@@ -1,47 +1,63 @@
-<div class="items-sell-main">
-  <h2 class="items-sell-title">日記を記録しよう！</h2>
-  <%= form_with model:@diary,local: true do |f| %>
-  <%= render 'shared/error_messages', model: f.object %>
-  <%# 投稿画像 %>
-  <div class="img-upload">
-    <div class="weight-bold-text">
-      今日の思い出の一枚
-      <span class="indispensable">必須</span>
-    </div>
-    <div class="click-upload">
-      <p>
-        写真と一緒に残そう！
-      </p>
-      <%= f.file_field :image, id:"item-image" %>
-    </div>
-  </div>
-  <%# /投稿画像 %>
-  <%# 商品名と商品説明 %>
-  <div class="new-items">
-    <div class="weight-bold-text">
-      今日のできごと
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.text_area :diary_title, class:"items-text", id:"item-name", placeholder:"今日のできごと（50文字まで)", maxlength:"50" %>
-    <div class="items-explain">
+<%= render "shared/second-header" %>
+<div class="item-new">
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">日記を編集をしよう！</h2>
+    <%= form_with model:@diary,local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+    <%# 投稿画像 %>
+    <div class="img-upload">
       <div class="weight-bold-text">
-        どんなできごと？
+        今日の思い出の一枚
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :diary_comment, class:"items-text", id:"item-info", placeholder:"できごとを書き残そう（ 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+      <div class="click-upload">
+        <p>
+          写真と一緒に残そう！
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# /投稿画像 %>
+    <%# 商品名と商品説明 %>
+    <div class="new-items">
       <div class="weight-bold-text">
-        日付
+        今日のできごと
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :diary_day, class:"items-text", id:"item-name", placeholder:"日付（2022-02-10)", maxlength:"12" %>
+      <%= f.text_area :diary_title, class:"items-text", id:"item-name", placeholder:"今日のできごと（50文字まで)", maxlength:"50" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          どんなできごと？
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :diary_comment, class:"items-text", id:"item-info", placeholder:"できごとを書き残そう（ 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+        <div class='form-text-wrap'>
+          <label class="form-text">今日の日付</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <div class='input-day-wrap'>
+          <%= raw sprintf(
+                      f.date_select(
+                        :diary_day,
+                        class:'select-birth',
+                        id:"diary-date",
+                        use_month_numbers: true,
+                        prompt:'--',
+                        start_year: 2022,
+                        end_year: (Time.now.year),
+                        date_separator: '%s'),
+                      "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+        </div>
+      </div>
     </div>
+    <%# /商品名と商品説明 %>
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "変更する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', diary_path(@diary.id), class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+    <%end%>
   </div>
-  <%# /商品名と商品説明 %>
-  <%# 下部ボタン %>
-  <div class="sell-btn-contents">
-    <%= f.submit "変更する" ,class:"sell-btn" %>
-    <%=link_to 'もどる', diary_path(@diary.id), class:"back-btn" %>
-  </div>
-  <%# /下部ボタン %>
-  <%end%>
 </div>
+<%= render "shared/second-footer"%>
