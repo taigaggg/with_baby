@@ -1,5 +1,5 @@
 class MealsController < ApplicationController
-  before_action :authenticate_user! , only:[:new,:edit, :destroy]
+  before_action :authenticate_user! , only:[:new,:edit, :show, :update, :destroy]
   before_action :set_meal, only: [:edit, :show, :update, :destroy]
   def index
    
