@@ -41,6 +41,7 @@ a {
 .introduction{
   display: flex;
   justify-content: space-around;
+  height: 100%;
 }
 
 .main-introduction{
@@ -162,9 +163,11 @@ a {
   font-weight: bold;
   margin-bottom: 2vh;
 }
+
 .purchase-btn{
   margin-bottom: 20px;
 }
+
 .purchase-btn-text{
   text-decoration: none;
   font-size: 3vh;
@@ -188,13 +191,13 @@ a {
 
 .item-lists>.list {
   width: 37vh;
-  padding: 1vw;
   background-color: #D2C6B8;
   text-decoration: none;
-  margin: 0px 10px;
+  margin: 10px 10px;
 }
 
 .item-img-content {
+
   margin-top: 3vh;
   margin-right: 2vh;
 }
@@ -239,8 +242,7 @@ margin-bottom: 20px;
 }
 
 .meal-img-content {
-  position: relative;
-  margin-top: 3vh;
+  margin-left: 15px;
 }
 
 .meal-btn-text{
