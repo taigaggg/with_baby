@@ -1,5 +1,5 @@
 class DiariesController < ApplicationController
-  before_action :authenticate_user! , only:[:new,:edit, :destroy]
+  before_action :authenticate_user! , only:[:new,:edit, :show, :update, :destroy]
   before_action :set_diary, only: [:edit, :show, :update, :destroy]
   def index
     if user_signed_in?
