@@ -39,9 +39,16 @@
   border-radius: 15px;
 }
 
+.user-nickname:hover{
+  background-color: rgb(0, 135, 197);
+}
 
 .logout {
   text-decoration: none;
   color: #333333;
   font-size: 15px;
+}
+
+.logout:hover{
+  font-weight: bold;
 }

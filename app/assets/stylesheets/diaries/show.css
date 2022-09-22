@@ -65,11 +65,15 @@
   text-align: center;
   background-color: orange;
   font-size: 20px;
-  font-weight: bold;
   color: #fff;
   margin: 20px 0px 10px 0px;
   padding: 2vh 3vw;
   border-radius: 15px;
+}
+
+.item-orange-btn:hover{
+  font-weight: bold;
+  background-color: rgb(255, 145, 0);
 }
 
 .or-text {
@@ -86,6 +90,10 @@
   border-radius: 10px;
 }
 
+.item-destroy:hover{
+  font-weight: bold;
+}
+
 .back{
   margin: 20px 0px 0px 0px;
 }
@@ -97,6 +105,10 @@
   padding: 2vh 2vw;
   text-decoration: none;
   border-radius: 15px;
+}
+
+.back-show-btn:hover{
+  background-color: rgb(0, 135, 197);
   font-weight: bold;
 }
 

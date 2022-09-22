@@ -133,6 +133,11 @@
   margin-bottom: 5vh;
 }
 
+.sell-btn:hover{
+  font-weight: bold;
+  background-color: rgb(255, 145, 0);
+}
+
 .back-btn {
   background: #aaa;
   border: 1px solid #aaa;
@@ -140,6 +145,11 @@
   color: #fff;
   padding: 15px 20%;
   text-decoration: none;
+}
+
+.back-btn:hover{
+  background: rgb(135, 135, 135);
+  font-weight: bold;
 }
 
 /* /下部ボタン */
