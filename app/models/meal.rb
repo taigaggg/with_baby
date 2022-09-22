@@ -5,6 +5,7 @@ class Meal < ApplicationRecord
   validates :image, presence: true
   validates :meal_title, presence: true, length: { maximum:50 }
   validates :meal_comment, presence: true, length: { maximum:1000 }
+  validates :meal_day, presence: true
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :taste
