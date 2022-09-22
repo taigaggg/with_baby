@@ -34,10 +34,10 @@
           <br><br> 他にも、食事の記録の可能です。<br>
           写真と写真のタイトル、そしてコメントと食事の時間、日付を投稿できます。<br><br>
           お子様の好き嫌いの記録、<br>
-          食事の過程を記録し、成長を実感しましょう。
+          食事の過程を記録し、成長を実感しましょう。<br><br><br><br>
+          是非、お子様の日々の思い出や、記録にご活用ください！
         </p>
       </div>
-      <p class="introduct-text">是非、お子さんの日々の思い出や、記録にご利用ください！</p>
     </div>
     <div class='new-button'>
       <div class='introduction-right'>
@@ -65,7 +65,7 @@
     <ul class='item-lists'>
       <%# 日記記録 %>
       <% @diaries.each do |diary|%>
-        <li class='item-list'>
+        <li class='list'>
           <%= link_to diary_path(diary.id) do %>
           <div class='item-img-content'>
             <%= image_tag diary.image, class: "item-img" %>
