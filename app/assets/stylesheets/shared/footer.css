@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.footer-main {
+  width: 100vw;
+  padding: 2vh 15vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+
+.footer-icon {
+  width: 180px;
+  margin-right: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 10px;
+}

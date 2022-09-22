@@ -1,0 +1,103 @@
+/* 日記の概要 */
+
+.item-show {
+  background-color: #D2C6B8;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 0;
+}
+
+.show-box {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 1200px;
+  padding: 10vh 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.show-box>.show-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.show-box-img {
+  height: 50vh;
+  width: 60vw;
+  min-height: 500px;
+  background-color: #d0c9c2;
+  object-fit: contain;
+}
+
+.show-comment-box {
+  margin: 25px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.show-comment-box>.show-comment {
+  font-size: 3vh;
+}
+
+.show-comment-box>.show-taste {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.show-comment-box>.show-time {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.show-comment-box>.show-day {
+  margin-top: 10px;
+  font-size: 16px;
+}
+/* /日記の概要 */
+
+/* 下部ボタン */
+.item-orange-btn {
+  text-align: center;
+  background-color: orange;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin: 20px 0px 10px 0px;
+  padding: 2vh 3vw;
+  border-radius: 15px;
+}
+
+.or-text {
+  font-size: 20px;
+}
+
+.item-destroy {
+  background-color: lightgray;
+  text-align: center;
+  font-size: 15px;
+  color: black;
+  margin: 10px 0px;
+  padding: 1vh 1vw;
+  border-radius: 10px;
+}
+
+.back{
+  margin: 20px 0px 0px 0px;
+}
+
+.back-show-btn {
+  background-color: rgb(20, 164, 208);
+  border: 1px solid rgb(20, 164, 208);
+  color: #fff;
+  padding: 2vh 2vw;
+  text-decoration: none;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+/* /下部ボタン */

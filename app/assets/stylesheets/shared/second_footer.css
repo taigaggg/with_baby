@@ -1,16 +1,17 @@
 * {
   box-sizing: border-box;
 }
-.second-header-main {
+.second-footer-main {
   width: 100%;
   min-width: 800px;
   height: 100%;
   background-color: #D2C6B8;
   display: flex;
   justify-content: center;
+  vertical-align: middle;
 }
 
-.top-page-second-header {
+.top-page-footer {
   width: 50%;
   padding-bottom: 70px;
   display: flex;
@@ -19,8 +20,8 @@
   background-color: #ffffff;
 }
 
-.withbaby-icon {
-  width: 200px;
+.second-icon {
+  width: 180px;
   margin-right: 20px;
   background-color: #ffffff;
   border-radius: 15px;

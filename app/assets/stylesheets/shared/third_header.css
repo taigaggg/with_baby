@@ -1,16 +1,16 @@
 * {
   box-sizing: border-box;
 }
-.second-header-main {
+.third-header-main {
   width: 100%;
   min-width: 800px;
   height: 100%;
-  background-color: #D2C6B8;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
 }
 
-.top-page-second-header {
+.top-page-third-header {
   width: 50%;
   padding-bottom: 70px;
   display: flex;

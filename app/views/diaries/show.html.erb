@@ -1,31 +1,31 @@
-<%# 商品の概要 %>
+<%= render "shared/header" %>
 <div class="item-show">
-  <div class="item-box">
-    <h2 class="name">
+  <div class="show-box">
+    <h2 class="show-title">
       <%= @diary.diary_title %>
     </h2>
-    <div class="item-img-content">
-      <%= image_tag @diary.image ,class:"item-box-img" %>
+    <div class="show-img-content">
+      <%= image_tag @diary.image ,class:"show-box-img" %>
     </div>
-    <div class="item-price-box">
-      <span class="item-price">
+    <div class="show-comment-box">
+      <span class="show-comment">
         <%= @diary.diary_comment %>
       </span>
-      <span class="item-postage">
+      <span class="show-day">
         <%= @diary.diary_day %>
       </span>
     </div>
       <% if current_user.id == @diary.user_id %>
-          <%= link_to "商品の編集", edit_diary_path(@diary.id), method: :get, class: "item-red-btn" %>
+          <%= link_to "日記の編集", edit_diary_path(@diary.id), method: :get, class: "item-orange-btn" %>
           <p class="or-text">or</p>
           <%= link_to "削除", diary_path(@diary.id), method: :delete, class:"item-destroy" %>
         <% else %>
-          <% link_to "コメントする", "#_path(@diary.id)" ,class:"item-red-btn"%>
+          <% link_to "コメントする", "#_path(@diary.id)" ,class:"item-orange-btn"%>
       <% end %>
-  </div>
-  <%# /商品の概要 %>
-  <div class="back">
-    <%=link_to '一覧へ戻る', root_path, class:"back-btn" %>
+    <div class="back">
+      <%=link_to '一覧へ戻る', root_path, class:"back-show-btn" %>
+    </div>
   </div>
 </div>
+<%= render "shared/footer" %>
 

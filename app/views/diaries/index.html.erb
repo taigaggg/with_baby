@@ -1,82 +1,114 @@
 <%= render "shared/header" %>
-<div class='nav'>
+<div class="main">
   <% if user_signed_in? %>
   <% else %>
-    <ul class='lists-right'>
-      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+  <div class="title-contents">
+    <h2 class="service-title">
+      子どもの”いま” は ”いま”しかない
+    </h2>
+    <p class='service-explain'>
+      子どもの成長はあっという間
+    </p>
+    <p class='service-explain'>
+      そんな日常の大切な記録を残しませんか？
+    </p>
+  </div>
+  <div class="introduction">
+    <div class="main-introduction">
+      <h3 class="introduction-title">紹介</h3>
+    </div>
+    <div class='new-button'>
+      <div class='introduction-right'>
+        <div class="right-title"> 今日の記録 </div>
+        <div><%= link_to 'ログイン', new_user_session_path, class: "login" %></div>
+        <div class="right-title"> 大切な記録を残す </div>
+        <div><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  
+
+  <% if user_signed_in? %>
+    <%# 記録一覧 %>
+  <div class='item-contents'>
+    <h2 class='title'>記録</h2>
+    <div class="subtitle" >
+      思い出一覧
+    </div>
+    <%= link_to(new_diary_path, class: 'purchase-btn') do %>
+    <span class='purchase-btn-text'>思い出を残そう</span>
+    <!-- < image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" > -->
+    <% end %>
+    <ul class='item-lists'>
+      <%# 日記記録 %>
+      <% @diaries.each do |diary|%>
+        <li class='item-list'>
+          <%= link_to diary_path(diary.id) do %>
+          <div class='item-img-content'>
+            <%= image_tag diary.image, class: "item-img" %>
+            <div class="mask">
+              <div class="caption">日記の詳細</div>
+            </div>
+          </div>
+          <div class='item-info'>
+            <h3 class='diary-title'>
+              <%= diary.diary_title %>
+            </h3>
+            <div class='diary-comment'>
+              <%= diary.diary_comment %>
+            </div>
+            <div class='diary-day'>
+              <%= diary.diary_day %>
+            </div>
+          </div>
+          <% end %>
+        </li>
+      <% end%>
     </ul>
+  </div>
+
+  <div class='item-contents'>
+    <div class="subtitle" >
+      食事記録一覧
+    </div>
+    <%= link_to(new_meal_path, class: 'purchase-btn') do %>
+    <span class='purchase-btn-text'>食事の記録を残す</span>
+    <!-- < image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" > -->
+    <% end %>
+    <ul class='item-lists'>
+      <%# 食事記録 %>
+      <% @meals.each do |meal|%>
+        <li class='list'>
+          <%= link_to meal_path(meal.id) do %>
+          <div class='item-img-content'>
+            <%= image_tag meal.image, class: "item-img" %>
+            <div class="mask">
+              <div class="caption">記録の詳細</div>
+            </div>
+          </div>
+          <div class='item-info'>
+            <h3 class='meal-title'>
+              <%= meal.meal_title %>
+            </h3>
+            <div class='meal-comment'>
+              <%= meal.meal_comment %>
+            </div>
+            <div class='meal-time'>
+              <%= meal.meal_time.name %>
+            </div>
+            <div class='meal-day'>
+              <%= meal.meal_day %>
+            </div>
+          </div>
+          <% end %>
+        </li>
+      <% end%>
+    </ul>
+  </div>
+
+  <% else %>
   <% end %>
 </div>
+<%= render "shared/footer" %>
 
-<% if user_signed_in? %>
-  <%# 記録一覧 %>
-<div class='item-contents'>
-  <h2 class='title'>記録</h2>
-  <%= link_to(new_diary_path, class: 'purchase-btn') do %>
-  <span class='purchase-btn-text'>思い出を残す</span>
-  <!-- < image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" > -->
-  <% end %>
-  <div class="subtitle" >
-    思い出一覧
-  </div>
-  <ul class='item-lists'>
-    <%# 日記記録 %>
-    <% @diaries.each do |diary|%>
-      <li class='list'>
-        <%= link_to diary_path(diary.id) do %>
-        <div class='item-img-content'>
-          <%= image_tag diary.image, class: "item-img" %>
-        </div>
-        <div class='item-info'>
-          <h3 class='item-name'>
-            <%= diary.diary_title %>
-          </h3>
-          <h3 class='item-name'>
-            <%= diary.diary_comment %>
-          </h3>
-          <h3 class='item-name'>
-            <%= diary.diary_day %>
-          </h3>
-        </div>
-        <% end %>
-      </li>
-    <% end%>
-  </ul>
-
-  <%= link_to(new_meal_path, class: 'purchase-btn') do %>
-  <span class='purchase-btn-text'>食事の記録を残す</span>
-  <!-- < image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" > -->
-  <% end %>
-  <div class="subtitle" >
-    食事記録一覧
-  </div>
-  <ul class='item-lists'>
-    <%# 食事記録 %>
-    <% @meals.each do |meal|%>
-      <li class='list'>
-        <%= link_to meal_path(meal.id) do %>
-        <div class='item-img-content'>
-          <%= image_tag meal.image, class: "item-img" %>
-        </div>
-        <div class='item-info'>
-          <h3 class='item-name'>
-            <%= meal.meal_title %>
-          </h3>
-          <h3 class='item-name'>
-            <%= meal.meal_comment %>
-          </h3>
-          <h3 class='item-name'>
-            <%= meal.meal_time.name %>
-          </h3>
-          <h3 class='item-name'>
-            <%= meal.meal_day %>
-          </h3>
-        </div>
-        <% end %>
-      </li>
-    <% end%>
-  </ul>
-</div>
-<% else %>
-<% end %>

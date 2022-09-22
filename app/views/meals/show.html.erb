@@ -1,37 +1,38 @@
-<%# 商品の概要 %>
+<%= render "shared/header" %>
 <div class="item-show">
-  <div class="item-box">
-    <h2 class="name">
+  <div class="show-box">
+    <h2 class="show-title">
       <%= @meal.meal_title %>
     </h2>
-    <div class="item-img-content">
-      <%= image_tag @meal.image ,class:"item-box-img" %>
+    <div class="show-img-content">
+      <%= image_tag @meal.image ,class:"show-box-img" %>
     </div>
-    <div class="item-price-box">
-      <span class="item-price">
+    <div class="show-comment-box">
+      <span class="show-comment">
         <%= @meal.meal_comment %>
       </span>
-      <span class="item-postage">
+      <span class="show-taste">
         <%= @meal.taste.name %>
       </span>
-      <span class="item-postage">
+      <span class="show-time">
         <%= @meal.meal_time.name %>
       </span>
-      <span class="item-postage">
+      <span class="show-day">
         <%= @meal.meal_day %>
       </span>
     </div>
       <% if current_user.id == @meal.user_id %>
-          <%= link_to "商品の編集", edit_meal_path(@meal.id), method: :get, class: "item-red-btn" %>
+          <%= link_to "記録の編集", edit_meal_path(@meal.id), method: :get, class: "item-orange-btn" %>
           <p class="or-text">or</p>
           <%= link_to "削除", meal_path(@meal.id), method: :delete, class:"item-destroy" %>
         <% else %>
-          <% link_to "コメントする", "#_path(@meal.id)" ,class:"item-red-btn"%>
+          <% link_to "コメントする", "#_path(@meal.id)" ,class:"item-orange-btn"%>
       <% end %>
+      <div class="back">
+        <%=link_to '一覧へ戻る', root_path, class:"back-show-btn" %>
+      </div>
   </div>
-  <%# /商品の概要 %>
-  <div class="back">
-    <%=link_to '一覧へ戻る', root_path, class:"back-btn" %>
-  </div>
+  
 </div>
+<%= render "shared/footer" %>
 
