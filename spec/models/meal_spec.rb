@@ -16,32 +16,32 @@ RSpec.describe Meal, type: :model do
       it "画像が空だと登録できない" do
         @meal.image = nil
         @meal.valid?
-        expect(@meal.errors.full_messages).to include("Image can't be blank")
+        expect(@meal.errors.full_messages).to include("画像を入力してください")
       end
       it "食事記録名が空では登録できない" do
         @meal.meal_title = ""
         @meal.valid?
-        expect(@meal.errors.full_messages).to include("Meal title can't be blank")
+        expect(@meal.errors.full_messages).to include("食べたものを入力してください")
       end
       it "食事記録のコメントが空では登録できない" do
         @meal.meal_comment = ""
         @meal.valid?
-        expect(@meal.errors.full_messages).to include("Meal comment can't be blank")
+        expect(@meal.errors.full_messages).to include("記録を入力してください")
       end
       it "好みの情報が空では登録できない" do
         @meal.taste_id = 1
         @meal.valid?
-        expect(@meal.errors.full_messages).to include("Taste can't be blank")
+        expect(@meal.errors.full_messages).to include("お子様の反応を入力してください")
       end
       it "食事時間の情報が空では登録できない" do
         @meal.meal_time_id = 1
         @meal.valid?
-        expect(@meal.errors.full_messages).to include("Meal time can't be blank")
+        expect(@meal.errors.full_messages).to include("時間を入力してください")
       end
       it "日記の投稿日が空では登録できない" do
         @meal.meal_day = ""
         @meal.valid?
-        expect(@meal.errors.full_messages).to include("Meal day can't be blank")
+        expect(@meal.errors.full_messages).to include("日付を入力してください")
       end
     end
   end

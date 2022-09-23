@@ -16,6 +16,6 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :parent
   belongs_to :gender
-  validates :parent_id, numericality: { other_than: 1 , message: "can't be blank"} 
-  validates :gender_id, numericality: { other_than: 1 , message: "can't be blank"} 
+  validates :parent_id, numericality: { other_than: 1 , message: "を入力してください"} 
+  validates :gender_id, numericality: { other_than: 1 , message: "を入力してください"} 
 end

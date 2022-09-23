@@ -16,22 +16,22 @@ RSpec.describe Diary, type: :model do
       it "画像が空だと登録できない" do
         @diary.image = nil
         @diary.valid?
-        expect(@diary.errors.full_messages).to include("Image can't be blank")
+        expect(@diary.errors.full_messages).to include("画像を入力してください")
       end
       it "日記名が空では登録できない" do
         @diary.diary_title = ""
         @diary.valid?
-        expect(@diary.errors.full_messages).to include("Diary title can't be blank")
+        expect(@diary.errors.full_messages).to include("できごとの名前を入力してください")
       end
       it "日記のコメントが空では登録できない" do
         @diary.diary_comment = ""
         @diary.valid?
-        expect(@diary.errors.full_messages).to include("Diary comment can't be blank")
+        expect(@diary.errors.full_messages).to include("できごとの内容を入力してください")
       end
       it "日記の投稿日が空では登録できない" do
         @diary.diary_day = ""
         @diary.valid?
-        expect(@diary.errors.full_messages).to include("Diary day can't be blank")
+        expect(@diary.errors.full_messages).to include("日付を入力してください")
       end
     end
   end
