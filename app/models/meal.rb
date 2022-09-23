@@ -5,11 +5,12 @@ class Meal < ApplicationRecord
   validates :image, presence: true
   validates :meal_title, presence: true, length: { maximum:50 }
   validates :meal_comment, presence: true, length: { maximum:1000 }
-  validates :meal_day, presence: true
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :taste
   belongs_to :meal_time
-  validates :taste_id, numericality: { other_than: 1 , message: "can't be blank"} 
-  validates :meal_time_id, numericality: { other_than: 1 , message: "can't be blank"} 
+  validates :taste_id, numericality: { other_than: 1 , message: "を入力してください"} 
+  validates :meal_time_id, numericality: { other_than: 1 , message: "を入力してください"} 
+
+validates :meal_day, presence: true
 end

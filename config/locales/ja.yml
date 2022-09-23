@@ -1,0 +1,22 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        babyname: お子様の名前
+        birthday: お誕生日
+        parent_id: ママ、パパ情報
+        gender_id: お子様の性別
+        message: を入力してください
+      diary:
+        diary_title: できごとの名前
+        diary_comment: できごとの内容
+        diary_day: 日付
+        image: 画像
+      meal:
+        meal_title: 食べたもの
+        meal_comment: 記録
+        meal_day: 日付
+        taste_id: お子様の反応
+        meal_time_id: 時間
+        image: 画像
