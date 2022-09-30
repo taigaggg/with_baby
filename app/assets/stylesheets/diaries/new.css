@@ -71,6 +71,10 @@
   margin-bottom: 15px;
 }
 
+.preview-image{
+  max-width:50%;
+}
+
 /* /記録画像 */
 
 /* 記録名と記録説明 */

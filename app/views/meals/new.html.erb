@@ -4,7 +4,7 @@
 <div class="item-new">
   <div class="items-sell-main">
     <h2 class="items-sell-title">食事を記録しよう！</h2>
-    <%= form_with model:@meal,local: true do |f| %>
+    <%= form_with model:@meal, id:'new_meal' ,local: true do |f| %>
     <%= render 'shared/error_messages', model: f.object %>
     <%# 投稿画像 %>
     <div class="img-upload">
@@ -16,8 +16,9 @@
         <p>
           ご飯の写真を撮ろう！
         </p>
-        <%= f.file_field :image, id:"item-image" %>
+        <%= f.file_field :image %>
       </div>
+      <div id="previews"></div>
     </div>
     <%# /投稿画像 %>
     <%# 記録名と記録説明 %>
