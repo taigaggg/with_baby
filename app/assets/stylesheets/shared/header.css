@@ -3,7 +3,7 @@
 }
 
 .top-page-header {
-  width: 100vw;
+  width: 100%;
   padding: 2vh 15vw;
   display: flex;
   justify-content: space-between;
@@ -12,20 +12,21 @@
 }
 
 .withbaby-icon {
-  width: 15vw;
-  margin-right: 10vw;
+  width: 8vw;
+  margin-right: 8vw;
 }
 
 .lists-right {
   display: flex;
   list-style: none;
   align-items: center;
+  width: 100%;
 }
 
 .greeting{
   color: #333333;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2vh;
 }
 
 .user-nickname {
